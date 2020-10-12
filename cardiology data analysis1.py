@@ -274,8 +274,7 @@ print(number_per_degree(patients_under_stress))
 # In[37]:
 
 
-data = [[number_of_no_threat, number_of_mild_threat, number_of_medium_threat, number_of_grave_cases],
-       [R_number_of_no_threat, R_number_of_mild_threat, R_number_of_medium_threat, R_number_of_grave_cases]]
+data = [patients_under_stress, patients_at_rest]
 
 X = np.arange(4)
 plt.bar(X + 0.00, data[0], color = 'b', width = 0.25)

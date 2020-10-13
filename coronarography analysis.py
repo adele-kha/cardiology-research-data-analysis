@@ -287,53 +287,22 @@ for pair in regressionPairs:
 
 # In[18]:
 
+def columns_to_list(dataframe, first_letter):
+    """this function creates a list of lists 
+    based on a specific condition for the name of the column in df"""
+    
+    list_of_list = []
+    list_of_col_names = [first_letter+str(x) for x in range(1,20)]
+    for i in list_of_col_names:
+        for col in dataframe:
+            if col == i:
+                list_of_list.extend(dataframe[col].tolist())
+    return list_of_lists
+        
 
-R1_list = df1['R1'].values.tolist()
-R2_list = df1['R2'].values.tolist()
-R3_list = df1['R3'].values.tolist()
-R4_list = df1['R4'].values.tolist()
-R5_list = df1['R5'].values.tolist()
-R6_list = df1['R6'].values.tolist()
-R7_list = df1['R7'].values.tolist()
-R8_list = df1['R8'].values.tolist()
-R9_list = df1['R9'].values.tolist()
-R10_list = df1['R10'].values.tolist()
-R11_list = df1['R11'].values.tolist()
-R12_list = df1['R12'].values.tolist()
-R13_list = df1['R13'].values.tolist()
-R14_list = df1['R14'].values.tolist()
-R15_list = df1['R15'].values.tolist()
-R16_list = df1['R16'].values.tolist()
-R19_list = df1['R19'].values.tolist()
+R_list_of_all = columns_to_list(df1, 'R')
+S_list_of_all = columns_to_list(df1, 'S')
 
-R_list_of_all = [
-    R1_list, R2_list, R3_list, R4_list, R5_list, R6_list, R7_list, R8_list, R9_list, R10_list, R11_list, R12_list,
-    R13_list, R14_list, R15_list, R16_list, R19_list
-]
-
-
-S1_list = df1['S1'].values.tolist()
-S2_list = df1['S2'].values.tolist()
-S3_list = df1['S3'].values.tolist()
-S4_list = df1['S4'].values.tolist()
-S5_list = df1['S5'].values.tolist()
-S6_list = df1['S6'].values.tolist()
-S7_list = df1['S7'].values.tolist()
-S8_list = df1['S8'].values.tolist()
-S9_list = df1['S9'].values.tolist()
-S10_list = df1['S10'].values.tolist()
-S11_list = df1['S11'].values.tolist()
-S12_list = df1['S12'].values.tolist()
-S13_list = df1['S13'].values.tolist()
-S14_list = df1['S14'].values.tolist()
-S15_list = df1['S15'].values.tolist()
-S16_list = df1['S16'].values.tolist()
-S19_list = df1['S19'].values.tolist()
-
-S_list_of_all = [
-    S1_list, S2_list, S3_list, S4_list, S5_list, S6_list, S7_list, S8_list, S9_list, S10_list, S11_list, S12_list,
-    S13_list, S14_list, S15_list, S16_list, S19_list
-]
 
 R_list_of_lists = []
 R_list_of_lists.append(R13_list)
